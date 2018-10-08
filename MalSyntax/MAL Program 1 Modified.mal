@@ -1,0 +1,12 @@
+          MOVIE     0, R0             ;Invalid Op Code
+          MOVEI     1, R1
+          MOVEI     129, R2           ;Ill Formed Operand: octal fomat needed            
+  TOP:    
+          BGT       R1, R2, CONTI     ;Invalid Lable: Label not declared
+          ADD       R0, R1            ;Too few Operands
+          INC       R1
+          BR        TOP
+  CONT:   MOVE      R0, TOTAL         ;Label Warning: label not used
+
+  90nds22:                            ;Ill formed label + label never used        
+        END

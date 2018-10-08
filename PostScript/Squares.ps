@@ -1,0 +1,60 @@
+%This program creates a specified set of squares that are rotated
+%and nested
+
+
+/red 0.0 def
+/green 0.17 def
+/blue 0.17 def
+/incRed { /red red 0.03 add def} def
+/incGreen { /green green 0.06 add def } def
+/incBlue { /blue blue 0.09 add def }def
+%Creates a simple square
+/Square{
+  newpath
+  0 0 moveto
+  0 250 rlineto
+  250 0 rlineto
+  0 -500 rlineto
+  -500 0 rlineto
+  0 500 rlineto
+  250 0 rlineto
+  closepath
+  gsave
+  .5 setgray
+  fill
+  grestore
+  red green blue setrgbcolor
+  stroke
+} def
+
+%Loop that slightly rotates and shrinks each square
+/DoSquares{
+  gsave
+  red green blue setrgbcolor
+  0 0 moveto
+
+  1 1 30{
+    incRed
+    incGreen
+    incBlue
+    pop
+    newpath
+    Square
+    22.5 rotate
+    .765 .765 scale
+  } for
+grestore
+} def
+
+/AddSignature{
+  /Courier findfont 20 scalefont
+  setfont
+  newpath
+  moveto
+  (Emily Lupini) show
+} def
+
+%----------Main------------
+297 421 translate
+DoSquares
+150 -400 AddSignature

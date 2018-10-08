@@ -1,0 +1,11 @@
+/Users/ElmaFud/Documents/School/PPL/Project 1/MalSyntax/bin/Debug/netcoreapp2.0/MalSyntax.deps.json
+/Users/ElmaFud/Documents/School/PPL/Project 1/MalSyntax/bin/Debug/netcoreapp2.0/MalSyntax.runtimeconfig.json
+/Users/ElmaFud/Documents/School/PPL/Project 1/MalSyntax/bin/Debug/netcoreapp2.0/MalSyntax.runtimeconfig.dev.json
+/Users/ElmaFud/Documents/School/PPL/Project 1/MalSyntax/bin/Debug/netcoreapp2.0/MalSyntax.dll
+/Users/ElmaFud/Documents/School/PPL/Project 1/MalSyntax/bin/Debug/netcoreapp2.0/MalSyntax.pdb
+/Users/ElmaFud/Documents/School/PPL/Project 1/MalSyntax/obj/Debug/netcoreapp2.0/MalSyntax.csproj.CoreCompileInputs.cache
+/Users/ElmaFud/Documents/School/PPL/Project 1/MalSyntax/obj/Debug/netcoreapp2.0/MalSyntax.AssemblyInfoInputs.cache
+/Users/ElmaFud/Documents/School/PPL/Project 1/MalSyntax/obj/Debug/netcoreapp2.0/MalSyntax.AssemblyInfo.cs
+/Users/ElmaFud/Documents/School/PPL/Project 1/MalSyntax/obj/Debug/netcoreapp2.0/MalSyntax.dll
+/Users/ElmaFud/Documents/School/PPL/Project 1/MalSyntax/obj/Debug/netcoreapp2.0/MalSyntax.pdb
+/Users/ElmaFud/Documents/School/PPL/Project 1/MalSyntax/obj/Debug/netcoreapp2.0/MalSyntax.csprojResolveAssemblyReference.cache

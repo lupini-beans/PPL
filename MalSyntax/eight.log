@@ -1,0 +1,35 @@
+MAL Lexer
+eight.mal
+eight.log
+01/01/0001
+Emily Lupini
+CS3210
+--------------------------------------------------------------------------------
+3. MOVEI 5, R0     
+4. MOVIE 5, R1         
+	ERROR: Invalid Op Code
+6. BGT R0, R1, if
+8.     BR else	     
+10. nope: ADD 20, R2    
+	Label Warning: 'nope' not used
+	ERROR: Too Few Operands - Expects 3
+12. if: MOVEI 89, R7    
+	ERROR: Ill Formed Operand - '89' must be in octal format.
+13. BR finish
+	ERROR: Invalid Label - 'finish' must be all characters and less than 5 in length
+15. else:
+16. MOVEI 011, R2, R3   
+	ERROR: Too Many Operands - Expects 2
+18. finish:
+	ERROR: Ill Formed Label - Label length must be 5 or less characters.
+	Label Warning: 'finish:' not used
+19. BR hi               
+	ERROR: Invalid Label - 'hi' not declared
+--------------------------------------------------------------------------------
+Ill-Formed Labels: 1
+Invalid Opcode: 1
+Too Many Operands: 1
+Too Few Operands: 1
+Ill-Formed Operands: 1
+Label Warnings: 4
+Total Errors: 9

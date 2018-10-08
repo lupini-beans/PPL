@@ -1,0 +1,108 @@
+% Business Card:
+/CreateBusinessCard{
+<</PageSize [1050 600]>> setpagedevice
+
+%Fills the background a dark green
+/BackgroundColor{
+  newpath
+  0 0 moveto
+  0 600 rlineto
+  1050 0 rlineto
+  0 -600 rlineto
+  closepath
+  gsave
+  0 .33 0 setrgbcolor
+  fill
+  grestore
+  stroke
+} def
+
+%Creates and fills the mountains on the business card
+/CreateMountains{
+  newpath
+  0 0 moveto
+  150 180 rlineto
+  120 -140 rlineto
+  100 240 rlineto
+  80 -140 rlineto
+  200 250 rlineto
+  100 -100 rlineto
+  100 250 rlineto
+  90 -160 rlineto
+  80 90 rlineto
+  35 -40 rlineto
+  0 -430 rlineto
+  -1050 0 rlineto
+  closepath
+  1 setgray
+  fill
+  5 setlinewidth
+  stroke
+} def
+
+%Creates the line for the chairlift cable
+/CreateChairLift{
+  newpath
+  0 130 moveto
+  900 500 rlineto
+  0 setgray
+  5 setlinewidth
+  stroke
+} def
+
+%Adds base posts for the chairlift at a specified location
+/CreatePosts{
+  newpath
+  moveto
+  0 220 rlineto
+  10 setlinewidth
+  stroke
+ } def
+
+/MyName{
+  /Courier-bold findfont 50 scalefont
+  setfont
+  newpath
+  moveto
+  29 rotate
+  (Emily Lupini) show
+} def
+
+/Slogan{
+  /Courier findfont 25 scalefont
+  setfont
+  newpath
+  moveto
+  (Dope on the slopes) show
+} def
+
+/Email{
+  /Courier findfont 25 scalefont
+  setfont
+  -29 rotate
+  newpath
+  moveto
+  (Email: elupini@msudenver.edu) show
+} def
+
+/Phone{
+  newpath
+  moveto
+  (Phone: (303)555-3456) show
+} def
+
+}def
+
+%-------------Main----------------
+CreateBusinessCard
+BackgroundColor
+140 0 CreatePosts
+500 0 CreatePosts
+500 200 CreatePosts
+860 440 CreatePosts
+CreateMountains
+CreateChairLift
+167 230 MyName
+680 90 Slogan
+600 50 Email
+600 20 Phone

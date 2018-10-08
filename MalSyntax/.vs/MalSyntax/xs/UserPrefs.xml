@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{46186275-543B-4577-96F4-C8471DECCD06}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MALLexer.cs">
+    <Files>
+      <File FileName="MALSyntax.cs" Line="1" Column="1" />
+      <File FileName="MALLexer.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MalSyntax PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

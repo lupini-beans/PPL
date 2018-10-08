@@ -1,0 +1,20 @@
+; This is a comment
+
+MOVEI 5, R0     
+MOVIE 5, R1         ; invalid opcode
+
+BGT R0, R1, if
+
+    BR else	     
+
+nope: ADD 20, R2    ; label warning + too few operands
+
+if: MOVEI 89, R7    ; ill formed operand
+BR finish
+
+else:
+MOVEI 011, R2, R3   ; too many operands
+
+finish:
+BR hi               ; label warning
+

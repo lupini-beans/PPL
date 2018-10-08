@@ -1,0 +1,198 @@
+% Data Structure or Similar:
+% The following program displays a simple NFA for the language
+% [Ends with 'cc'] U [Starts with 'a']
+% With the alphabet 'a' 'b' and 'c'
+
+/CreateDataStructure{
+<</PageSize [792 612]>> setpagedevice
+
+%Creates the Title at the top of the page
+/DoTitle{
+  /Courier-Bold findfont 45 scalefont
+  setfont
+  newpath
+  370 570 moveto
+  (NFA) show
+} def
+
+%Creates the Subtitle
+/DoSubtitle{
+  /Courier findfont 18 scalefont
+  setfont
+  25 550 moveto
+  (Language: [Ends with 'cc'] U [Starts with 'a'] | Alphabet: 'a' 'b' 'c') show
+} def
+
+%Creates the text for the table on valid and invalid Strings
+/DoValid{
+  /Courier-Oblique findfont 10 scalefont
+  setfont
+  20 530 moveto
+  (Valid Strings    Invalid Strings) show
+  /Courier findfont 10 scalefont
+  setfont
+  20 515 moveto
+  (cc               null) show
+  20 505 moveto
+  (a                cab) show
+  20 495 moveto
+  (abcc             bbca) show
+  20 485 moveto
+  (abc              bac) show
+} def
+
+%Creates the outline for the table
+/DoTable{
+  10 525 moveto
+  215 0 rlineto
+  0 setgray
+  1 setlinewidth
+  stroke
+  107.5 540 moveto
+  0 -80 rlineto
+  stroke
+} def
+
+%Creates a circle in the specified location to serve as a state
+/CreateState {
+  0 0 moveto
+  newpath
+  30 0 360 arc
+  closepath
+  gsave
+  1 setgray
+  fill
+  grestore
+  2 setlinewidth
+  stroke
+} def
+
+%Smaller subcircle in a specified location to signify an accept state
+/FinalState{
+  0 0 moveto
+  newpath
+  20 0 360 arc
+  closepath
+  stroke
+} def
+
+%Creates all edges(arrows) between states
+/Edges{
+  15 242.5 moveto
+  30 0 rlineto
+  -10 5 rlineto
+  45 242.4 moveto
+  -10 -5 rlineto
+  90 267.4 moveto
+  82 120 rlineto
+  -10 0 rlineto
+  10 0 rlineto
+  0 -10 rlineto
+  90 227.4 moveto
+  180 -120 rlineto
+  -10 0 rlineto
+  10 0 rlineto
+  0 10 rlineto
+
+  /StraightEdge{
+  moveto
+  140 0 rlineto
+  -10 5 rlineto
+  10 -5 rlineto
+  -10 -5 rlineto
+  } def
+
+  230 400 StraightEdge
+  430 400 StraightEdge
+  330 100 StraightEdge
+  2 setlinewidth
+  stroke
+} def
+
+%Creates a self referencing node's edge
+/LoopEdge{
+  newpath
+  15 -12 190 arc
+  5 5 rlineto
+  -5 -5 rlineto
+  -5 5 rlineto
+  stroke
+} def
+
+%Labels all the states numerically
+/LabelStates{
+  /Courier-Bold findfont 15 scalefont
+  setfont
+  newpath
+  70 239 moveto
+  (1) show
+  195 397 moveto
+  (2) show
+  395 397 moveto
+  (3) show
+  595 397 moveto
+  (4) show
+  295 97 moveto
+  (5) show
+  495 97 moveto
+  (6) show
+} def
+
+%Labels all the edges with valid characters
+/LabelEdges{
+  /Courier findfont 15 scalefont
+  setfont
+  newpath
+  300 405 moveto
+  (c) show
+  500 405 moveto
+  (c) show
+  170 450 moveto
+  (a, b, c) show
+  400 105 moveto
+  (a) show
+  470 150 moveto
+  (a, b, c) show
+  155 190 moveto
+  -35 rotate
+  (null) show
+  -85 310 moveto
+  35 rotate
+  55 rotate
+  (null) show
+  -55 rotate
+} def
+
+%Adds my "signature" to the bottom right of the page
+/AddSignature{
+  /Courier findfont 20 scalefont
+  setfont
+  newpath
+  moveto
+  (Emily Lupini) show
+} def
+
+} def
+
+%----------Main-----------
+CreateDataStructure
+DoTitle
+DoSubtitle
+DoValid
+DoTable
+
+Edges
+200 430 LoopEdge
+500 130 LoopEdge
+75 242.5 CreateState
+200 400 CreateState
+300 100 CreateState
+400 400 CreateState
+500 100 CreateState
+500 100 FinalState
+600 400 CreateState
+600 400 FinalState
+LabelStates
+LabelEdges
+
+630 20 AddSignature

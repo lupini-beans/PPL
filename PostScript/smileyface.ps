@@ -1,0 +1,263 @@
+%Smiley Faces:
+%The following program has a variety of smiley face
+%parts as various procedures to be assembled in the main program
+
+/CreateSmiles{
+<</PageSize [400 400]>> setpagedevice
+% Eyes
+/DoSunglassRim{
+  newpath
+  moveto
+  lineto
+  0 0 0 setrgbcolor
+  3 setlinewidth
+  stroke
+} def
+
+/DoSunglassBase{
+  newpath
+  27 180 0 arc
+  closepath
+  gsave
+  0 0 0 setrgbcolor
+  fill
+  grestore
+  1.5 setlinewidth
+  stroke
+} def
+
+/DoGlare{
+  newpath
+  moveto
+  lineto
+  lineto
+  lineto
+  closepath
+  1 1 1 setrgbcolor
+  fill
+  1 setlinewidth
+  stroke
+} def
+
+
+/DoEye1 {
+  newpath
+  5 0 360 arc
+  closepath
+  gsave
+  1 setgray
+  fill
+  grestore
+  0.5 setlinewidth
+  0 setgray
+  stroke
+} def
+
+/DoEye2 {
+  newpath
+  5 0 360 arc
+  closepath
+  gsave
+  1 setgray
+  fill
+  grestore
+  0.5 setlinewidth
+  0 setgray
+  stroke
+} def
+
+/DoIris1 {
+  newpath
+  2 0 360 arc
+  closepath
+  gsave
+  0 1 1 setrgbcolor
+  fill
+  grestore
+  0 1 1 setrgbcolor
+  stroke
+} def
+
+/DoIris2 {
+  newpath
+  2 0 360 arc
+  closepath
+  gsave
+  0 1 1 setrgbcolor
+  fill
+  grestore
+  0 1 1 setrgbcolor
+  stroke
+} def
+
+/DoPupil1{
+  newpath
+  1 0 360 arc
+  closepath
+  gsave
+  0 setgray
+  fill
+  grestore
+  0 setgray
+  stroke
+} def
+
+/DoPupil2{
+  newpath
+  1 0 360 arc
+  closepath
+  gsave
+  0 setgray
+  fill
+  grestore
+  stroke
+} def
+
+/DoSimpleEye{
+  newpath
+  moveto
+  0 5 rlineto
+  5 0 rlineto
+  0 -5 rlineto
+  -5 0 rlineto
+  closepath
+  1 1 1 setrgbcolor
+  fill
+} def
+
+% Nose
+/DoNose1{
+  newpath
+  moveto
+  lineto
+  1 1 1 setrgbcolor
+  3 setlinewidth
+  stroke
+} def
+
+% Faces
+/DoFace1 {
+  gsave
+  0 0 moveto
+  newpath
+  60 0 360 arc
+  closepath
+  gsave
+  1.0 0.83 0.0 setrgbcolor
+  fill
+  grestore
+  stroke
+} def
+
+/DoFace2{
+  newpath
+  moveto
+  0 120 rlineto
+  120 0 rlineto
+  0 -120 rlineto
+  -120 0 rlineto
+  closepath
+  0 0 0 setrgbcolor
+  1 setlinewidth
+  fill
+} def
+
+/DoFace3{
+  gsave
+  0 0 moveto
+  newpath
+  60 0 360 arc
+  closepath
+  gsave
+  0.33 0.67 0.67 setrgbcolor
+  fill
+  grestore
+  0 setgray
+  1 setlinewidth
+  stroke
+} def
+
+% Mouths
+/DoSideSmile{
+  newpath
+  10 270 90 arc
+  3 setlinewidth
+  stroke
+} def
+
+/DoFrown{
+  newpath
+  10 0 180 arc
+  1.5 setlinewidth
+  stroke
+} def
+
+/DoOpenMouth{
+  newpath
+  moveto
+  lineto
+  0 0 0 setrgbcolor
+  stroke
+} def
+
+/DoOpenMouth2{
+  newpath
+  28.5 180 0 arc
+  closepath
+  fill
+  1 setlinewidth
+  stroke
+} def
+
+
+% Signature
+/DoDesignedBy{
+  /Times-Roman findfont
+  14 scalefont
+  setfont
+  newpath
+  moveto
+  (Created and designed by:) show
+} def
+
+/DoSignature{
+  /Times-Roman findfont
+  14 scalefont
+  setfont
+  newpath
+  moveto
+  (Emily Lupini) show
+} def
+} def
+%---------Main------------
+
+CreateSmiles
+% Face 1
+85 280 DoFace1
+60 305 DoEye1
+80 305 DoEye2
+58 305 DoIris1
+78 305 DoIris2
+58 305 DoPupil1
+78 305 DoPupil2
+75 250 DoFrown
+
+% Face 2
+220 220 DoFace2
+268 285 DoSimpleEye
+268 275 DoSimpleEye
+278 282 288 282 DoNose1
+288 282 DoSideSmile
+
+% Face 3
+85 90 DoFace3
+28 115 142 115 DoSunglassRim
+58 115 DoSunglassBase
+112 115 DoSunglassBase
+78 114 81 114 78 114 78 105 81 114 DoGlare
+132 114 135 114 132 114 132 105 135 114 DoGlare
+56.5 80 113.5 80 DoOpenMouth
+85 80 DoOpenMouth2
+
+220 115 DoDesignedBy
+220 90 DoSignature
