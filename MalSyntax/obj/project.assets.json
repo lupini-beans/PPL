@@ -674,13 +674,13 @@
       "projectName": "MalSyntax",
       "projectPath": "/Users/ElmaFud/Documents/School/Spring 2018/Principles of Programming Languages/MalSyntax/MalSyntax.csproj",
       "packagesPath": "/Users/ElmaFud/.nuget/packages/",
-      "outputPath": "/Users/ElmaFud/Documents/School/Spring 2018/Principles of Programming Languages/MalSyntax/obj",
+      "outputPath": "/Users/ElmaFud/Documents/School/Spring 2018/Principles of Programming Languages/MalSyntax/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/ElmaFud/.config/NuGet/NuGet.Config"
+        "/Users/ElmaFud/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -703,9 +703,8 @@
       "netcoreapp2.0": {
         "dependencies": {
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
-            "version": "2.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           }
         },

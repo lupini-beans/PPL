@@ -5,4 +5,11 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="eight.log" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\netcoreapp2.0\MalSyntax.runtimeconfig.dev.json" />
+    <None Include="bin\Debug\netcoreapp2.0\MalSyntax.runtimeconfig.json" />
+  </ItemGroup>
 </Project>
